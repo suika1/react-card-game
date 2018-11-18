@@ -1,8 +1,8 @@
 # react-card-game
 Memory training card game
 
-##`This is simple card game, where you need to find a pair for each card`
+## `This is simple card game, where you need to find a pair for each card`
 
-###`-You can choose between two sizes, if game isn't starting at a moment`
-###`-Also you can start new game whenever you want, if game isn't starting at a moment`
-###`-Choice for shirt image is also avaliable`
+### `-You can choose between two sizes, if game isn't starting at a moment`
+### `-Also you can start new game whenever you want, if game isn't starting at a moment`
+### `-Choice for shirt image is also avaliable`
