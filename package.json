@@ -1,5 +1,5 @@
 {
-  "homepage": "https://suika1.github.io/react-card-game",
+  "homepage": "http://suika1.github.io/react-card-game",
   "name": "react-card-game",
   "version": "0.1.0",
   "private": true,
@@ -14,7 +14,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "card-game -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,6 +26,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "card-game": "0.0.1"
+    "card-game": "0.0.1",
+    "gh-pages": "^2.0.1"
   }
 }

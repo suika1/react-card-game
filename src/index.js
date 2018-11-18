@@ -264,10 +264,11 @@ class Game extends React.Component{
     }
 
     forceNewGame(){
-        this.setState({
-            forcedNewGame: true,
-            cardsInOrder: shuffle(this.state.cardsInOrder),
-        });
+        if (!this.state.forcedNewGame)
+            this.setState({
+                forcedNewGame: true,
+                cardsInOrder: shuffle(this.state.cardsInOrder),
+            });
     }
 
     render(){
