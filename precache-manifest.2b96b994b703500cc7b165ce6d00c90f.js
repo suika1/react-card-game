@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-card-game/static/media/6-13.62a3b333.jpg"
   },
   {
-    "revision": "76da43852214d4f85638",
+    "revision": "94b3f9ef13ec2bad48af",
     "url": "/react-card-game/static/css/main.6df7bc63.chunk.css"
   },
   {
@@ -64,8 +64,8 @@ self.__precacheManifest = [
     "url": "/react-card-game/static/media/6-12.5ad1023b.jpg"
   },
   {
-    "revision": "76da43852214d4f85638",
-    "url": "/react-card-game/static/js/main.76da4385.chunk.js"
+    "revision": "94b3f9ef13ec2bad48af",
+    "url": "/react-card-game/static/js/main.94b3f9ef.chunk.js"
   },
   {
     "revision": "d497370344978e945bac8418fe510c14",
@@ -128,7 +128,7 @@ self.__precacheManifest = [
     "url": "/react-card-game/static/media/s2.f75440f9.png"
   },
   {
-    "revision": "7efbb050612ea3c81af60d745a310554",
+    "revision": "4e163078f3359ec7768872c53e6bb91b",
     "url": "/react-card-game/index.html"
   }
 ];
