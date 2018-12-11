@@ -3,14 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class Card extends React.Component{
-    constructor(props){
-        super(props);
-        this.onCoup = this.onCoup.bind(this);
-    }
-
-    onCoup(e){
+    onCoup = () => {
         this.props.onCoup(this.props.id, this.props.img);
-    }
+    };
 
     render(){
         let imageUrl;
@@ -55,12 +50,11 @@ class Board extends React.Component{
             isVictory: true,
         };
 
-        this.handleCoup = this.handleCoup.bind(this);
     }
 
     //show cards for the time and make them inactive
     //after that - hide all cards and make them active
-    afterGameStarted(){
+    afterGameStarted = () => {
         if (this.props.cards.length === this.state.invertedIds.length)
             //this happens if shirt is changed while all cards are showing or if we changed size
             return;
@@ -78,11 +72,11 @@ class Board extends React.Component{
                 isVictory: false,
             });
         }, 5000);
-    }
+    };
 
     //Triggers when click on card happened
-    handleCoup(id, img){
-        console.log(`recieved click on id = ${id}, img = ${img}`);
+    handleCoup = (id, img) => {
+        console.log(`received click on id = ${id}, img = ${img}`);
         if (!this.state.invertedIds || this.state.invertedIds.length < 1 || this.state.invertedIds[0] === null) { //if no cards are inverted
             console.log(`currently no other card is inverted`);
             this.setState({
@@ -135,7 +129,7 @@ class Board extends React.Component{
 
               }, 1000);
         }
-    }
+    };
 
     render(){
         if (this.state.isVictory || this.props.forcedNewGame) {
@@ -168,14 +162,14 @@ class Board extends React.Component{
             }
 
            cards.push(
-               <Card
-                   img = {img}
-                   shirtImg = {this.props.shirtImg}
-                   id = {index}
-                   key = {index}
+               <Card //render each card
+                   img={img}
+                   shirtImg={this.props.shirtImg}
+                   id={index}
+                   key={index}
                    //if id of inverted card == card.key, then we show the card
-                   isInverted = {this.state.invertedIds && this.state.invertedIds.indexOf(index) !== -1}
-                   onCoup = {onCoup}
+                   isInverted={this.state.invertedIds && this.state.invertedIds.indexOf(index) !== -1}
+                   onCoup={onCoup}
                />
            );
         });
@@ -195,83 +189,78 @@ class Game extends React.Component{
             fieldSize: '4x4',
             shirtImg: this.props.shirts[0].image,
             cardsInOrder: shuffle(this.props.cards[0]),
-            forcedNewGame: false,
+            forcedNewGame: true,
             winCount : 0,
         };
-
-        this.triggerNewGame = this.triggerNewGame.bind(this);
-        this.randomizeCards = this.randomizeCards.bind(this);
-        this.unforceNewGame = this.unforceNewGame.bind(this);
-        this.changeShirt = this.changeShirt.bind(this);
-        this.changeSize = this.changeSize.bind(this);
-        this.forceNewGame = this.forceNewGame.bind(this);
     }
 
     //Randomize cards when victory is achieved
-    triggerNewGame(){
+    triggerNewGame = () => {
         console.log('Game received victory, updating');
         this.setState({
             winCount: this.state.winCount + 1,
         });
         this.randomizeCards();
-    }
+    };
 
-    randomizeCards(){
+    randomizeCards = () => {
         this.setState({
             cardsInOrder: shuffle(this.state.cardsInOrder),
         });
-    }
+        this.forceNewGame();
+    };
 
-    unforceNewGame(){
-        this.setState({
-            forcedNewGame: false,
-        });
-    }
+    //set value for forcedNewGame to false
+    unforceNewGame = () => this.setState({forcedNewGame: false});
 
     //triggers on click on shirt div.
-    changeShirt(event){
+    changeShirt = (event) => {
         let newShirtUrl = event.target.classList[1];
         this.setState({
             shirtImg: newShirtUrl,
         });
-    }
+    };
 
-    changeSize(event){
+    changeSize = (event) => {
         if (this.state.forcedNewGame)
             return;
         let num;
-        if (event.target.id === '4x4'){
-            num = 0;
-            this.setState({
-                fieldSize: '4x4',
-            });
-        }else if (event.target.id === '6x6'){
-            num = 1;
-            this.setState({
-                fieldSize: '6x6',
-            });
-        }else if (event.target.id === '8x8'){
-            num = 2;
-            this.setState({
-                fieldSize: '8x8',
-            });
+        //set fieldSize
+        switch(event.target.id){
+            case '4x4':
+                num = 0;
+                this.setState({
+                    fieldSize: '4x4',
+                });
+                break;
+            case '6x6':
+                num = 1;
+                this.setState({
+                    fieldSize: '6x6',
+                });
+                break;
+            default:
+                num = 0;
+                this.setState({
+                    fieldSize: '4x4',
+                });
         }
+        //set cards array and force new game
         this.setState({
             cardsInOrder: shuffle(this.props.cards[num]),
             forcedNewGame: true,
         });
+    };
 
-    }
-
-    forceNewGame(){
+    forceNewGame = () => {
         if (!this.state.forcedNewGame)
             this.setState({
                 forcedNewGame: true,
                 cardsInOrder: shuffle(this.state.cardsInOrder),
             });
-    }
+    };
 
-    render(){
+    render = () =>{
         //build shirt list
         const shirts = [];
         this.props.shirts.forEach((shirt) => {
@@ -422,7 +411,6 @@ const CARDS6x6 = [
     {image: '6-17.jpg'},
     {image: '6-18.jpg'},
 ];
-
 
 const CARDS = [CARDS4x4, CARDS6x6];
 
