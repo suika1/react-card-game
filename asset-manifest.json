@@ -1,9 +1,9 @@
 {
-  "main.css": "/react-card-game/static/css/main.6df7bc63.chunk.css",
-  "main.js": "/react-card-game/static/js/main.94b3f9ef.chunk.js",
-  "main.js.map": "/react-card-game/static/js/main.94b3f9ef.chunk.js.map",
-  "static/js/1.3795073c.chunk.js": "/react-card-game/static/js/1.3795073c.chunk.js",
-  "static/js/1.3795073c.chunk.js.map": "/react-card-game/static/js/1.3795073c.chunk.js.map",
+  "main.css": "/react-card-game/static/css/main.02a0b4b6.chunk.css",
+  "main.js": "/react-card-game/static/js/main.0497c232.chunk.js",
+  "main.js.map": "/react-card-game/static/js/main.0497c232.chunk.js.map",
+  "static/js/1.4701d118.chunk.js": "/react-card-game/static/js/1.4701d118.chunk.js",
+  "static/js/1.4701d118.chunk.js.map": "/react-card-game/static/js/1.4701d118.chunk.js.map",
   "runtime~main.js": "/react-card-game/static/js/runtime~main.b1798a4e.js",
   "runtime~main.js.map": "/react-card-game/static/js/runtime~main.b1798a4e.js.map",
   "static/media/6-3.jpg": "/react-card-game/static/media/6-3.bd8b8490.jpg",
@@ -34,8 +34,8 @@
   "static/media/6-9.jpg": "/react-card-game/static/media/6-9.2c355cfe.jpg",
   "static/media/s1.png": "/react-card-game/static/media/s1.9acb110b.png",
   "static/media/s2.png": "/react-card-game/static/media/s2.f75440f9.png",
-  "static/css/main.6df7bc63.chunk.css.map": "/react-card-game/static/css/main.6df7bc63.chunk.css.map",
+  "static/css/main.02a0b4b6.chunk.css.map": "/react-card-game/static/css/main.02a0b4b6.chunk.css.map",
   "index.html": "/react-card-game/index.html",
-  "precache-manifest.2b96b994b703500cc7b165ce6d00c90f.js": "/react-card-game/precache-manifest.2b96b994b703500cc7b165ce6d00c90f.js",
+  "precache-manifest.5351fc219fdeb0f7b7dd40cc0b48bfe6.js": "/react-card-game/precache-manifest.5351fc219fdeb0f7b7dd40cc0b48bfe6.js",
   "service-worker.js": "/react-card-game/service-worker.js"
 }
