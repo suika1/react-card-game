@@ -1,4 +1,4 @@
-# `Game link: ` http://suika.ru/simple-card-game/
+# `Game link: ` http://suika.ru/react-card-game/
 ## `This is a simple card game where you need to find a pair for each card`
  ### `-You can choose between two sizes (if game isn't starting at a moment)`
 ### `-Also you can start new game whenever you want (if game isn't starting at a moment)`
