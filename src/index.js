@@ -11,7 +11,6 @@ class Card extends React.Component{
         let imageUrl;
         let style = {};
         let shirtUrl;
-        return 'test of jenkins';
 
         if (this.props.img !== null) {
             imageUrl = require(`./img/${this.props.img}`);
