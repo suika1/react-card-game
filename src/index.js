@@ -8,6 +8,7 @@ class Card extends React.Component{
     };
 
     render(){
+        return 'Haru, jenkins':
         let imageUrl;
         let style = {};
         let shirtUrl;
